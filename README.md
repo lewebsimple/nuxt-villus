@@ -6,6 +6,8 @@
 
 > Villus GraphQL client integration with Nuxt.js
 
+### 🚧 This is a work-in-progress, do not use in production
+
 ## Features
 
 - Provide Villus client to Nuxt / Vue
