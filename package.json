@@ -1,0 +1,46 @@
+{
+  "name": "nuxt-villus",
+  "version": "0.1.3",
+  "description": "Villus GraphQL integration with Nuxt.js",
+  "author": "Pascal Martineau <pascal@lewebsimple.ca>",
+  "keywords": [
+    "nuxt",
+    "module",
+    "nuxt-module",
+    "graphql",
+    "villus"
+  ],
+  "license": "MIT",
+  "homepage": "Villus GraphQL integration with Nuxt.js",
+  "repository": "lewebsimple/nuxt-villus",
+  "main": "dist/module.js",
+  "types": "dist/module.d.ts",
+  "typings": "types/nuxt-villus.d.ts",
+  "files": [
+    "dist",
+    "types"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "release": "yarn build && standard-version && git push --follow-tags origin master && npm publish --access public"
+  },
+  "peerDependencies": {
+    "graphql": "14.x || 15.x"
+  },
+  "dependencies": {
+    "defu": "^3.2.2",
+    "villus": "^1.0.0-rc.15"
+  },
+  "devDependencies": {
+    "@lewebsimple/eslint-config": "^0.2.1",
+    "@nuxt/types": "^2.15.3",
+    "eslint": "^7.22.0",
+    "standard-version": "^9.1.1",
+    "typescript": "^4.2.3"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@lewebsimple/eslint-config"
+    ]
+  }
+}
