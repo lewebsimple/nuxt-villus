@@ -3,7 +3,8 @@ import defu from "defu";
 import { Module } from "@nuxt/types";
 
 export interface NuxtVillusOptions {
-  url: string;
+  httpEndpoint?: string;
+  wsEndpoint?: string;
 }
 
 declare module "@nuxt/types" {
@@ -19,7 +20,8 @@ const nuxtVillusModule: Module<NuxtVillusOptions> = function (moduleOptions) {
   const { nuxt } = this;
 
   const defaults: NuxtVillusOptions = {
-    url: process.env.VILLUS_ENDPOINT || "/graphql",
+    httpEndpoint: process.env.VILLUS_HTTP_ENDPOINT,
+    wsEndpoint: process.env.VILLUS_WS_ENDPOINT,
   };
 
   const options = defu(this.options.villus || {}, moduleOptions, defaults);

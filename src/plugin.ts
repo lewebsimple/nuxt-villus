@@ -1,14 +1,25 @@
 import { Plugin } from "@nuxt/types";
-import { createClient } from "villus";
+import { createClient, cache, dedup, fetch } from "villus";
+import { $fetch } from "ohmyfetch";
 
 const villusPlugin: Plugin = ({ $config }, inject) => {
-  if (!$config.villus.url) {
+  // Default Villus plugins
+  const plugins = [
+    cache(),
+    dedup(),
+    fetch({
+      fetch: $fetch,
+    }),
+  ];
+
+  if (!$config.villus.httpEndpoint) {
     return;
   }
 
   // Create Villus client
   const villus = createClient({
-    url: $config.villus.url,
+    url: $config.villus.httpEndpoint,
+    use: plugins,
   });
 
   // Inject Villus client

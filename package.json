@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "defu": "^3.2.2",
+    "ohmyfetch": "^0.1.8",
     "villus": "^1.0.0-rc.15"
   },
   "devDependencies": {
