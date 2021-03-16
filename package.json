@@ -3,6 +3,15 @@
   "version": "0.1.5",
   "description": "Villus GraphQL integration with Nuxt.js",
   "author": "Pascal Martineau <pascal@lewebsimple.ca>",
+  "license": "MIT",
+  "homepage": "https://github.com/lewebsimple/nuxt-villus",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lewebsimple/nuxt-villus.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lewebsimple/nuxt-villus/issues"
+  },
   "keywords": [
     "nuxt",
     "module",
@@ -10,9 +19,6 @@
     "graphql",
     "villus"
   ],
-  "license": "MIT",
-  "homepage": "Villus GraphQL integration with Nuxt.js",
-  "repository": "lewebsimple/nuxt-villus",
   "main": "dist/module.js",
   "types": "dist/module.d.ts",
   "typings": "types/nuxt-villus.d.ts",
