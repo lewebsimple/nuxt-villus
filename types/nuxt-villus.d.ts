@@ -14,12 +14,7 @@ declare module "@nuxt/types" {
   interface Context {
     $villus: Client;
   }
-  // Nuxt 2.14+
   interface NuxtConfig {
-    villus?: NuxtVillusOptions;
-  }
-  // Nuxt 2.9 - 2.13
-  interface Configuration {
     villus?: NuxtVillusOptions;
   }
 }

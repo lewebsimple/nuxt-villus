@@ -9,7 +9,7 @@
     ],
     "esModuleInterop": true,
     "moduleResolution": "node",
-    "declaration": false,
+    "declaration": true,
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
