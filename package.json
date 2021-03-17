@@ -24,6 +24,7 @@
   "typings": "types/nuxt-villus.d.ts",
   "files": [
     "dist",
+    "templates",
     "types"
   ],
   "scripts": {
@@ -50,7 +51,7 @@
       "@lewebsimple/eslint-config"
     ],
     "ignorePatterns": [
-      "src/*.template.js"
+      "templates/*.js"
     ]
   }
 }
