@@ -1,6 +1,6 @@
 {
   "name": "nuxt-villus",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Villus GraphQL integration with Nuxt.js",
   "author": "Pascal Martineau <pascal@lewebsimple.ca>",
   "license": "MIT",
