@@ -1,9 +1,11 @@
+import { Plugin } from "@nuxt/types";
 import { createClient, cache, dedup, fetch } from "villus";
 import $fetch from "cross-fetch";
 
-const options = <%= JSON.stringify(options, null, 2) %>;
+// Get options from template without triggering ESLint
+const options = JSON.parse(`<%= JSON.stringify(options, null, 2) %>`);
 
-const villusPlugin = (context, inject) => {
+const villusPlugin: Plugin = (context, inject) => {
   // Default Villus plugins
   const plugins = [
     cache(),
@@ -14,7 +16,7 @@ const villusPlugin = (context, inject) => {
   ];
 
   if (!options.httpEndpoint) {
-    throw new Error('GraphQL HTTP endpoint missing.');
+    throw new Error("GraphQL HTTP endpoint missing.");
   }
 
   // Create Villus client

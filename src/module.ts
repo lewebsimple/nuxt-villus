@@ -1,5 +1,4 @@
 import { resolve } from "path";
-import defu from "defu";
 import { Module } from "@nuxt/types";
 
 export interface NuxtVillusOptions {
@@ -15,10 +14,8 @@ const nuxtVillusModule: Module<NuxtVillusOptions> = function (moduleOptions) {
     wsEndpoint: process.env.VILLUS_WS_ENDPOINT,
   };
 
-  const options = defu(this.options.villus || {}, moduleOptions, defaults);
-
   this.addPlugin({
-    src: resolve(__dirname, "../templates/plugin.js"),
+    src: resolve(__dirname, "../dist/plugin.js"),
     fileName: "nuxt-villus/plugin.js",
     options: moduleOptions,
   });
