@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.10](https://github.com/lewebsimple/nuxt-villus/compare/v0.1.9...v0.1.10) (2021-03-17)
+
+
+### Features
+
+* Support Composition API ([2fb28da](https://github.com/lewebsimple/nuxt-villus/commit/2fb28da1d3d17d157ba3fc89aeaa08c3a7b06860))
+
 ### [0.1.9](https://github.com/lewebsimple/nuxt-villus/compare/v0.1.8...v0.1.9) (2021-03-17)
 
 
