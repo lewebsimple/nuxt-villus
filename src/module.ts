@@ -4,15 +4,11 @@ import { Module } from "@nuxt/types";
 export interface NuxtVillusOptions {
   httpEndpoint?: string;
   wsEndpoint?: string;
+  enableCompositionApi?: boolean;
 }
 
 const nuxtVillusModule: Module<NuxtVillusOptions> = function (moduleOptions) {
-  const { nuxt } = this;
-
-  const defaults: NuxtVillusOptions = {
-    httpEndpoint: process.env.VILLUS_HTTP_ENDPOINT,
-    wsEndpoint: process.env.VILLUS_WS_ENDPOINT,
-  };
+  moduleOptions.enableCompositionApi = this.nuxt.options.buildModules.includes("@nuxtjs/composition-api");
 
   this.addPlugin({
     src: resolve(__dirname, "../dist/plugin.js"),

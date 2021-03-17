@@ -31,6 +31,7 @@
     "release": "yarn build && standard-version && git push --follow-tags origin master && npm publish --access public"
   },
   "peerDependencies": {
+    "@nuxtjs/composition-api": ">= 0.22",
     "graphql": "14.x || 15.x",
     "nuxt": ">= 2.14"
   },
@@ -45,6 +46,7 @@
   "devDependencies": {
     "@lewebsimple/eslint-config": "^0.2.1",
     "@nuxt/types": "^2.15.3",
+    "@nuxtjs/composition-api": "^0.22.1",
     "eslint": "^7.22.0",
     "standard-version": "^9.1.1",
     "typescript": "^4.2.3"
