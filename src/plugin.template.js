@@ -1,5 +1,5 @@
 import { createClient, cache, dedup, fetch } from "villus";
-import { $fetch } from "ohmyfetch";
+import $fetch from "cross-fetch";
 
 const options = <%= JSON.stringify(options, null, 2) %>;
 
@@ -14,7 +14,7 @@ const villusPlugin = (context, inject) => {
   ];
 
   if (!options.httpEndpoint) {
-    return;
+    throw new Error('GraphQL HTTP endpoint missing.');
   }
 
   // Create Villus client
