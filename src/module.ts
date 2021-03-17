@@ -7,15 +7,6 @@ export interface NuxtVillusOptions {
   wsEndpoint?: string;
 }
 
-declare module "@nuxt/types" {
-  interface NuxtConfig {
-    villus?: NuxtVillusOptions;
-  } // Nuxt 2.14+
-  interface Configuration {
-    villus?: NuxtVillusOptions;
-  } // Nuxt 2.9 - 2.13
-}
-
 const nuxtVillusModule: Module<NuxtVillusOptions> = function (moduleOptions) {
   const { nuxt } = this;
 
@@ -27,8 +18,8 @@ const nuxtVillusModule: Module<NuxtVillusOptions> = function (moduleOptions) {
   const options = defu(this.options.villus || {}, moduleOptions, defaults);
 
   this.addPlugin({
-    src: resolve(__dirname, "plugin.js"),
-    fileName: "nuxt-villus.js",
+    src: resolve(__dirname, "../src/plugin.template.js"),
+    fileName: "nuxt-villus/plugin.js",
     options: moduleOptions,
   });
 };

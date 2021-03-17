@@ -48,6 +48,9 @@
   "eslintConfig": {
     "extends": [
       "@lewebsimple/eslint-config"
+    ],
+    "ignorePatterns": [
+      "src/*.template.js"
     ]
   }
 }
