@@ -8,7 +8,7 @@ export interface NuxtVillusOptions {
 }
 
 const nuxtVillusModule: Module<NuxtVillusOptions> = function (moduleOptions) {
-  moduleOptions.enableCompositionApi = this.nuxt.options.buildModules.includes("@nuxtjs/composition-api");
+  moduleOptions.enableCompositionApi = this.nuxt.options.buildModules.includes("@nuxtjs/composition-api/module");
 
   this.addPlugin({
     src: resolve(__dirname, "../dist/plugin.js"),
